@@ -80,7 +80,7 @@
   <!-- MAIN WRAPPER -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full space-y-6">
 
-    <!-- 1. STATS OVERVIEW CARDS (Mobile: Stacked, Desktop: 2 Grid) -->
+    <!-- 1. STATS OVERVIEW CARDS -->
     <section id="stat-cards-section" class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <!-- Stat 1: Total Pengeluaran -->
       <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex items-center justify-between">
@@ -105,10 +105,10 @@
       </div>
     </section>
 
-    <!-- 2. MAIN 2-COLUMN GRID (Left 7 cols, Right 5 cols) -->
+    <!-- 2. MAIN 2-COLUMN GRID -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
       
-      <!-- LEFT COLUMN (7 COLS): ANGGOTA & CATAT PENGELUARAN -->
+      <!-- LEFT COLUMN: ANGGOTA & CATAT PENGELUARAN -->
       <div class="lg:col-span-7 space-y-6">
 
         <!-- CARD: ANGGOTA KELOMPOK -->
@@ -178,7 +178,7 @@
               />
             </div>
 
-            <!-- 2. Siapa yang Bayar? (Multi-payer support) -->
+            <!-- 2. Siapa yang Bayar? -->
             <div class="space-y-2.5">
               <div class="flex items-center justify-between">
                 <label class="text-sm font-bold text-slate-800">Siapa yang Bayar?</label>
@@ -186,7 +186,6 @@
               </div>
               <p class="text-xs text-slate-400">Masukkan jumlah uang yang dibayarkan oleh masing-masing anggota (bisa lebih dari 1 orang).</p>
 
-              <!-- Dynamic list of members with currency inputs -->
               <div id="payer-inputs-container" class="space-y-2 pt-1 max-h-[320px] overflow-y-auto pr-1">
                 <div class="bg-slate-50 border border-dashed border-slate-200 rounded-xl p-4 text-center">
                   <p class="text-xs text-slate-400">Tambahkan anggota terlebih dahulu pada form di atas.</p>
@@ -194,7 +193,7 @@
               </div>
             </div>
 
-            <!-- 3. Ditanggung Oleh? (Split between) -->
+            <!-- 3. Ditanggung Oleh? -->
             <div class="space-y-2.5 pt-2 border-t border-slate-100">
               <div class="flex items-center justify-between">
                 <label class="text-sm font-bold text-slate-800">Ditanggung Oleh?</label>
@@ -209,7 +208,6 @@
               </div>
               <p class="text-xs text-slate-400">Centang anggota yang ikut menikmati atau menanggung beban biaya ini.</p>
 
-              <!-- Checkbox pills list -->
               <div id="split-members-container" class="flex flex-wrap gap-2 pt-1">
                 <p class="text-xs text-slate-400 italic py-2">Tambahkan anggota terlebih dahulu.</p>
               </div>
@@ -224,13 +222,11 @@
               <span id="per-person-share-display" class="text-lg font-extrabold text-[#059669]">Rp 0 / orang</span>
             </div>
 
-            <!-- Form Validation Error Message -->
             <p id="expense-error-msg" class="text-xs text-rose-500 hidden items-center gap-1 font-medium">
               <span class="material-symbols-outlined text-sm">error</span>
               <span id="expense-error-text">Harap lengkapi form pengeluaran</span>
             </p>
 
-            <!-- Action Buttons -->
             <div class="flex items-center justify-end gap-3 pt-2">
               <button 
                 id="btn-reset-expense-form" 
@@ -253,10 +249,10 @@
 
       </div>
 
-      <!-- RIGHT COLUMN (5 COLS): BAYAR KE SIAPA? & SALDO BERSIH -->
+      <!-- RIGHT COLUMN: BAYAR KE SIAPA? & SALDO BERSIH -->
       <div class="lg:col-span-5 space-y-6">
 
-        <!-- CARD: BAYAR KE SIAPA? (Settlement Routes) -->
+        <!-- CARD: BAYAR KE SIAPA? -->
         <section class="bg-white rounded-2xl p-5 md:p-6 border border-slate-200/80 shadow-xs space-y-4">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -275,7 +271,6 @@
           </div>
           <p class="text-xs text-slate-500">Rekomendasi transfer paling ringkas agar urusan utang selesai.</p>
 
-          <!-- List of recommended transfer routes -->
           <div id="settlement-routes-container" class="space-y-3 pt-1">
             <div class="bg-slate-50 border border-dashed border-slate-200 rounded-xl p-6 text-center">
               <span class="material-symbols-outlined text-3xl text-slate-300 mb-1">task_alt</span>
@@ -295,7 +290,6 @@
             <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">Surplus & Minus</span>
           </div>
 
-          <!-- List of member net balances -->
           <div id="member-balances-container" class="space-y-2.5 pt-1">
             <div class="bg-slate-50 border border-dashed border-slate-200 rounded-xl p-5 text-center">
               <p class="text-xs text-slate-400 italic">Belum ada anggota terdaftar.</p>
@@ -307,7 +301,7 @@
 
     </div>
 
-    <!-- 3. RIWAYAT PENGELUARAN (Full Width Bottom Card) -->
+    <!-- 3. RIWAYAT PENGELUARAN -->
     <section class="bg-white rounded-2xl p-5 md:p-6 border border-slate-200/80 shadow-xs space-y-4">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
         <div class="flex items-center gap-2.5">
@@ -325,7 +319,6 @@
         </button>
       </div>
 
-      <!-- Transaction List (Responsive cards on mobile & desktop) -->
       <div id="transactions-history-container" class="space-y-3 pt-1">
         <div class="bg-slate-50 border border-dashed border-slate-200 rounded-xl p-8 text-center">
           <span class="material-symbols-outlined text-3xl text-slate-300 mb-1">history</span>
